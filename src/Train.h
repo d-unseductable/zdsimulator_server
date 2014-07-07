@@ -3,6 +3,11 @@
 
 #include "Types.h"
 
+/*
+ * TTrain class describes a train and its attributes for calculating
+ * current route state
+ */
+
 class TTrain
 {
 public:
@@ -27,14 +32,13 @@ public:
   uchar   GetWhistle() const;
 
 private:
-  uchar   itsId;
-  ushort  itsTrackId;
-  ushort  itsNum;
-  ushort  itsLocoType;
-  uchar   itsCarNum;
-  float   itsSpeed;
-  uchar   itsWhistle;
+  uchar   itsId;       // Train id
+  ushort  itsTrackId;  // Track id
+  ushort  itsNum;      // Train number
+  ushort  itsLocoType; // Locomotive type
+  uchar   itsCarNum;   // Number of cars
+  float   itsSpeed;    // Current speed
+  uchar   itsWhistle;  // Whistle state
 };
 
 #endif
-
