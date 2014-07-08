@@ -6,6 +6,10 @@
 #include "Svetofor.h"
 #include "Train.h"
 
+/*
+ * TBlocking describe the whole blocking system of a route.
+ * Each route has two blockings - the odd and the even.
+ */
 class TBlocking
 {
 public:
@@ -32,10 +36,9 @@ public:
   TTrain    *GetTrainByNum(ushort aNum) const;
 
 private:
-  bool                itsAsc;
-  vector<TSvetofor*>  *itsSvVec;
-  vector<TTrain*>     *itsTrVec;
+  bool                itsAsc;    // Ascending or descending blocking
+  vector<TSvetofor*>  *itsSvVec; // Vector of signals
+  vector<TTrain*>     *itsTrVec; // Vector of trains
 };
 
 #endif
-
